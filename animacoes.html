@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a Camila - Animações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .hearts-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #ff69b4;
+            transform: rotate(45deg);
+            animation: float 6s ease-in infinite;
+            opacity: 0;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #ff69b4;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            left: -15px;
+        }
+
+        .heart:after {
+            top: -15px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: rotate(45deg) translateY(0) scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(45deg) translateY(-1000px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .message-box {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="hearts"></div>
+    
+    <div class="container">
+        <div class="message-box">
+            <h1 style="font-family: 'Dancing Script', cursive; color: #ff69b4; font-size: 3rem; margin-bottom: 1rem;">
+                Carta Aberta
+            </h1>
+            <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1rem;">
+                Cada foto representa um momento especial que vivemos juntos.
+            </p>
+            <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1rem;">
+                Você é a razão do meu sorriso todos os dias.
+            </p>
+            <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 1rem;">
+                Te amo mais que ontem, menos que amanhã.
+            </p>
+            <a href="index.html" class="back-btn">Volte para as fotinhas!</a>
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            document.getElementById('hearts').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a Camila</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .animations-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .animations-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Feliz Dia dos Namorados</h1>
+            <p class="subtitle">Para uma pessoa muito especial, Camila!</p>
+        </header>
+
+        <nav class="album-nav">
+            <button class="nav-btn active" data-page="1">Página 1</button>
+            <button class="nav-btn" data-page="2">Página 2</button>
+            <button class="nav-btn" data-page="3">Página 3</button>
+            <button class="nav-btn" data-page="4">Página 4</button>
+        </nav>
+
+        <div class="photo-album">
+            <!-- Página 1 -->
+            <div class="photo-page active" data-page="1">
+                <div class="photo-container">
+                    <div class="photo-item">
+                        <img src="imagens/barzinho.jpg" alt="Nossa foto 1">
+                        <p class="caption">Um dos primeiros barzinhos juntos</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/Praia.jpg" alt="Nossa foto 2">
+                        <p class="caption">Primeira foto na praia</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/primeiro dia namorando.jpg" alt="Nossa foto 3">
+                        <p class="caption">Primeiro dia de namoro!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página 2 -->
+            <div class="photo-page" data-page="2">
+                <div class="photo-container">
+                    <div class="photo-item">
+                        <img src="imagens/ano novo.jpg" alt="Nossa foto 4">
+                        <p class="caption">Ano novo mais que especial, com você e minha familia</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/eu vo e camila.jpg" alt="Nossa foto 5">
+                        <p class="caption">Eu, você e minha vó</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/eu e vc.jpg" alt="Nossa foto 6">
+                        <p class="caption">E por fim eu e você!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página 3 -->
+            <div class="photo-page" data-page="3">
+                <div class="photo-container">
+                    <div class="photo-item">
+                        <img src="imagens/a gente.jpg" alt="Nossa foto 7">
+                        <p class="caption">Primeiros dias frequentando a casa da sua tia!</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/barzinho foto zuada.jpg" alt="Nossa foto 8">
+                        <p class="caption">Um barzinho gostoso, sdds!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página 4 -->
+            <div class="photo-page" data-page="4">
+                <div class="photo-container">
+                    <div class="photo-item">
+                        <img src="imagens/praiaa.jpg" alt="Nossa foto 9">
+                        <p class="caption">Mais uma da gente na praia!</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="imagens/billy.jpg" alt="Nossa foto 10">
+                        <p class="caption">E por fim o nosso biuuly, (no saco)!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message">
+            <h2>Para minha gorduxa</h2>
+            <p>Continue sendo essa pessoa incrivel e forte, juntos conquistaremos todos nossos objetivos e sonhos! Eu te amo!</p>
+            <a href="animacoes.html" class="animations-btn">Ultima parte ❤️</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
